@@ -38,7 +38,7 @@ RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale
 # --- Container Configuration ---
 # Your original EXPOSE and VOLUME instructions
 EXPOSE 3306
-VOLUME ["/data/mariadb/kotatsu-db"]
+VOLUME ["/data/mariadb/alriadb-tailscaled"]
 
 # This is the new command. It runs your "start.sh" script which handles everything.
 CMD ["/scripts/start.sh"]

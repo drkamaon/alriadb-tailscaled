@@ -1,6 +1,6 @@
 # https://fly.io/docs/reference/configuration/
 
-app = 'tailscaled-kotatsu-db'
+app = 'alriadb-tailscaled'
 primary_region = 'sin'
 swap_size_mb = 512
 
@@ -12,21 +12,16 @@ swap_size_mb = 512
 [env]
   # Tailscale configuration
   TS_HOSTNAME: your_hostname
-  TS_AUTHKEY: ${{ secrets.TS_AUTHKEY }}
-
+  
   # DB configuration
   MYSQL_DATABASE: your_database_name
   MYSQL_CHARSET: utf8mb4
   MYSQL_COLLATION: utf8mb4_unicode_ci
-  
   MYSQL_USER: mysql
-  MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
-
-  MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
 
 [[mounts]]
   source = 'mariadb'
-  destination = '/data/mariadb/kotatsu-db'
+  destination = '/data/mariadb/alriadb-tailscaled'
 
 [[vm]]
   memory = '256mb'
