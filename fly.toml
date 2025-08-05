@@ -1,7 +1,7 @@
 # https://fly.io/docs/reference/configuration/
 
 app = 'alriadb-tailscaled'
-primary_region = 'sin'
+primary_region = '<your_region>'
 swap_size_mb = 512
 
 [build]
@@ -11,10 +11,10 @@ swap_size_mb = 512
 
 [env]
   # Tailscale configuration
-  TS_HOSTNAME: your_hostname
-  
+  TS_HOSTNAME: <your_hostname>
+
   # DB configuration
-  MYSQL_DATABASE: your_database_name
+  MYSQL_DATABASE: <your_database_name>
   MYSQL_CHARSET: utf8mb4
   MYSQL_COLLATION: utf8mb4_unicode_ci
   MYSQL_USER: mysql
@@ -24,6 +24,9 @@ swap_size_mb = 512
   destination = '/data/mariadb/alriadb-tailscaled'
 
 [[vm]]
-  memory = '256mb'
-  cpu_kind = 'shared'
-  cpus = 1
+  memory = '<your_memory_size>'
+  cpu_kind = '<your_cpu_kind>'
+  cpus = <your_cpu_core_count>
+
+# https://fly.io/calculator
+
