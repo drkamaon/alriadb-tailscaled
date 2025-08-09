@@ -2,7 +2,7 @@
 
 app = 'alriadb-tailscaled'
 primary_region = '<your_region>'
-swap_size_mb = '512'
+swap_size_mb = 512
 
 [build]
 
@@ -24,8 +24,8 @@ swap_size_mb = '512'
   destination = '/data/mariadb/alriadb-tailscaled'
 
 [[vm]]
-  memory = '<your_memory_size>'
+  memory = <your_memory_size>
   cpu_kind = '<your_cpu_kind>'
-  cpus = '<your_cpu_core_count>'
+  cpus = <your_cpu_core_count>
 
 # https://fly.io/calculator/
