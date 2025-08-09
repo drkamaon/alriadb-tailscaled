@@ -11,13 +11,13 @@ swap_size_mb = 512
 
 [env]
   # Tailscale configuration
-  TS_HOSTNAME: <your_hostname>
+  TS_HOSTNAME = <your_hostname>
 
   # DB configuration
-  MYSQL_DATABASE: <your_database_name>
-  MYSQL_CHARSET: utf8mb4
-  MYSQL_COLLATION: utf8mb4_unicode_ci
-  MYSQL_USER: mysql
+  MYSQL_DATABASE = <your_database_name>
+  MYSQL_CHARSET = utf8mb4
+  MYSQL_COLLATION = utf8mb4_unicode_ci
+  MYSQL_USER = mysql
 
 [[mounts]]
   source = 'mariadb'
