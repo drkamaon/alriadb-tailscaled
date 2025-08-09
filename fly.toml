@@ -1,4 +1,5 @@
 # https://fly.io/docs/reference/configuration/
+# https://fly.io/calculator/
 
 app = 'alriadb-tailscaled'
 primary_region = '<your_region>'
@@ -28,5 +29,5 @@ swap_size_mb = 512
   cpu_kind = '<your_cpu_kind>'
   cpus = <your_cpu_core_count>
 
-# https://fly.io/calculator
+
 
